@@ -1,0 +1,4 @@
+[environments.dev]
+store = "codeinspirero-dev.myshopify.com"
+path = "."
+theme-editor-sync = true

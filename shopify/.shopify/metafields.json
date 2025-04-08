@@ -1,0 +1,327 @@
+{
+  "article": [
+    {
+      "key": "products",
+      "namespace": "mtblogfeaturedproducts",
+      "name": "Featured Products",
+      "description": "A selection of products you want to show on your blog post.",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "blog": [],
+  "collection": [],
+  "company": [],
+  "company_location": [],
+  "location": [],
+  "market": [],
+  "order": [],
+  "page": [],
+  "product": [
+    {
+      "key": "queries",
+      "namespace": "shopify--discovery--product_search_boost",
+      "name": "Search product boosts",
+      "description": "List of search queries for which a product gets higher rank in search results",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "related_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products",
+      "description": "List of related products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "related_products_display",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Related products settings",
+      "description": "Determines how related products are displayed along with algorithmic product recommendations",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "complementary_products",
+      "namespace": "shopify--discovery--product_recommendation",
+      "name": "Complementary products",
+      "description": "List of complementary products",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "new_metafields",
+      "namespace": "custom",
+      "name": "new_metafields",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "tabs",
+      "namespace": "custom",
+      "name": "Tabs",
+      "description": "",
+      "type": {
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_group",
+      "namespace": "custom",
+      "name": "product group",
+      "description": "",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "color",
+      "namespace": "custom",
+      "name": "Color",
+      "description": "",
+      "type": {
+        "name": "mixed_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "color-pattern",
+      "namespace": "shopify",
+      "name": "Color",
+      "description": "Defines the primary color or pattern, such as blue or striped",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_boundle",
+      "namespace": "custom",
+      "name": "product boundle",
+      "description": "",
+      "type": {
+        "name": "product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "compare_products",
+      "namespace": "ldt",
+      "name": "LDT: Compare Products",
+      "description": "Allow add dynamic compare items",
+      "type": {
+        "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "compare_attribute_set",
+      "namespace": "ldt",
+      "name": "LDT: Compare Attribute Set Code",
+      "description": "Allow add dynamic attribute set for compare attributes",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "text",
+      "namespace": "custom",
+      "name": "text",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "variant": [],
+  "shop": [
+    {
+      "key": "config",
+      "namespace": "wizzy",
+      "name": "Wizzy Config",
+      "description": "Wizzy Search Config of the Store",
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "data",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Data",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "custom_script",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Custom Script",
+      "description": null,
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "custom_style",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Custom Style",
+      "description": null,
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_offers_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Product Offers Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "custom_fields_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Custom Fields Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "custom_cart_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Custom Cart Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "custom_banner_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Custom Banner Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "reward_bar_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Reward Bar Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "trusted_badges_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Trusted Badges Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "testimonials_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Testimonials Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "custom_buttons_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Custom Buttons Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "add_ons_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Add Ons Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "payment_icons_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Payment Icons Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "pp_custom_banner_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Pp Custom Banner Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "pp_trusted_badges_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Pp Trusted Badges Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    },
+    {
+      "key": "pp_custom_buttons_translation",
+      "namespace": "app--8430878721--qikify_checkout",
+      "name": "Pp Custom Buttons Translation",
+      "description": null,
+      "type": {
+        "name": "json",
+        "category": "JSON"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{% assign variant = product.selected_or_first_available_variant %}
+
+<div class="product-grid-item">
+  <div class="image">
+    {% if variant.featured_image.src != blank %}
+      <img src="{{ variant.featured_image.src | img_url: '300x' }}" alt="">
+    {% endif %}
+  </div>
+
+  <div class="content">
+    <a href="{{ product.url }}">
+      <div class="title">{{ product.title }}</div>
+    </a>
+
+    <form
+      action="/cart/add"
+      method="post"
+      data-cart-submit
+    >
+
+      <variant-swatch>
+        {% if product.variants.size > 1 %}
+          <select name="id" id="variant-select">
+            {% for variant in product.variants %}
+              <option
+                value="{{ variant.id }}"
+                data-variant-price="{{ variant.price | money_with_currency }}"
+              >
+                {{ variant.title }}
+              </option>
+            {% endfor %}
+          </select>
+        {% else %}
+          <input
+            type="hidden"
+            name="id"
+            value="{{ product.selected_or_first_available_variant.id }}"
+          >
+        {% endif %}
+
+        <button data-cart-add="{{ product.selected_or_first_available_variant.id }}"  type="submit" >
+        <span class="price" data-currency="{{ '0.00' | money_with_currency }}">
+          {{ variant.price | money_with_currency }}
+        </span>
+          <span>
+          add to cart
+        </span>
+        </button>
+      </variant-swatch>
+    </form>
+  </div>
+</div>
+
+
+

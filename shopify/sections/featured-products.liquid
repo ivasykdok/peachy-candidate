@@ -1,0 +1,85 @@
+<style>
+  [data-section-type="featured-products"] {
+    background-image: url({{ section.settings.section-bg | image_url: width: 1440 }});
+    background-size: contain;
+    background-position: center top;
+  }
+
+  @media (max-width: 768px) {
+    [data-section-type="featured-products"] {
+      background-image: url({{ section.settings.section-bg_mobile | image_url: width: 768 }});
+    }
+  }
+</style>
+
+<div
+  data-section-type="featured-products"
+  data-section-id="{{ section.id }}"
+>
+
+
+  {% if section.settings.title != blank %}
+    {% assign words = section.settings.title | split: ' ' %}
+    {% assign last_word = words | last %}
+    {% assign words_count = words | size %}
+    {% assign count_without_last = words_count | minus: 1 %}
+    {% assign words_except_last = words | slice: 0, count_without_last %}
+
+    <h2 class="title">
+      {{ words_except_last | join: ' ' }} <span>{{ last_word }}</span>
+    </h2>
+  {% endif %}
+
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% assign products = section.settings.featured-products-collection.products  %}
+      {% for product in products %}
+        <div class="swiper-slide">
+          {% render 'product-grid-item', product: product %}
+        </div>
+      {% endfor %}
+
+
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Featured Products",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Featured Products Title",
+        "default": "OUR BEST SELLERS"
+      },
+      {
+        "type": "collection",
+        "id": "featured-products-collection",
+        "label": "Featured Products Collection"
+      },
+      {
+        "type": "image_picker",
+        "id": "section-bg",
+        "label": "Featured Products Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "section-bg_mobile",
+        "label": "Featured Products Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Products"
+      }
+    ]
+  }
+{% endschema %}

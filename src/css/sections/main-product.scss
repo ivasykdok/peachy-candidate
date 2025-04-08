@@ -1,0 +1,18 @@
+.main-product {
+  padding: 20px;
+
+  .product-grid-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-column-gap: 70px;
+  }
+
+  .content {
+    .title  {
+      text-align: left;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

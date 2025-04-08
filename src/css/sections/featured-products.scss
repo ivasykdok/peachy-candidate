@@ -1,0 +1,185 @@
+[data-section-type="featured-products"] {
+  padding-top: 58px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  @media(max-width: 768px) {
+    padding-top: 74px;
+  }
+
+  select {
+    position: relative;
+    z-index: 999;
+  }
+
+  .title {
+    font-size: 66px;
+    line-height: 66px;
+    font-family: "Adorn Condensed Sans", sans-serif;
+    text-align: center;
+    margin: 0 0 24px 0;
+    text-transform: uppercase;
+    letter-spacing: normal;
+
+    @media(max-width: 768px) {
+      font-size: 42px;
+      line-height: 42px;
+      margin-bottom: 42px;
+
+      span {
+        color: #fff;
+        text-shadow: 2px 2px 0 #000;
+      }
+    }
+  }
+
+  .swiper {
+    padding: 20px;
+
+    &.swiper-horizontal {
+      .swiper-wrapper {
+        padding-bottom: 19px;
+
+        @media(min-width: 769px) {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+          grid-gap: 32px;
+          transform: none !important;
+          pointer-events: none;
+        }
+
+        .swiper-slide {
+          @media(min-width: 769px) {
+            width: auto !important;
+            flex-shrink: 0;
+          }
+
+          select, button[data-cart-add] {
+            pointer-events: auto;
+          }
+        }
+      }
+
+      .swiper-pagination {
+        bottom: 0;
+
+        @media(min-width: 769px) {
+          display: none;
+        }
+
+        .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          background-color: #E3E3E3;
+          opacity: 1;
+
+          &.swiper-pagination-bullet-active {
+            background-color: #FFD11F;
+          }
+        }
+      }
+    }
+  }
+}
+
+// product grid item
+.product-grid-item {
+  padding: 19px;
+  border-radius: 8px;
+  border: 4px solid #FDE0DC;
+  background-color: #FDF5F4;
+
+  .image {
+    border-radius: 8px;
+    overflow: hidden;
+    pointer-events: none;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Adorn Condensed Sans", sans-serif;
+    max-width: 176px;
+    margin: 19px auto 0;
+    pointer-events: auto;
+  }
+
+  [data-cart-submit] {
+    variant-swatch {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      select {
+        margin-top: 19px;
+        background-color: transparent;
+        background-image: url("https://cdn.shopify.com/s/files/1/0793/7245/2155/files/Peachy_Candidate_Frame_9.png?v=1743963955");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 24px;
+        border-bottom: 1px solid #FDE0DC;
+        padding: 0 30px 15px 0;
+        appearance: none;
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: 18px;
+        font-family: 'Fira Sans', sans-serif;
+        letter-spacing: normal;
+      }
+
+      button[data-cart-add] {
+        margin-top: 25px;
+        background-color: #FFD11F;
+        border-radius: 2px;
+        border: 2px solid black;
+        height: 49px;
+        cursor: pointer;
+        position: relative;
+        transition: all .3s;
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Futura PT', sans-serif;
+
+        &:hover {
+          transform: translate3d(-5px, -5px, 0);
+          box-shadow: 5px 5px 0 0 black;
+        }
+
+        span {
+          display: inline-block;
+          text-transform: uppercase;
+          line-height: 1;
+        }
+
+        .price {
+          position: relative;
+          padding-right: 5px;
+          margin-right: 5px;
+
+          &:after {
+            content: "";
+            height: 100%;
+            width: 1px;
+            top: 0;
+            right: 0;
+            background-color: black;
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
